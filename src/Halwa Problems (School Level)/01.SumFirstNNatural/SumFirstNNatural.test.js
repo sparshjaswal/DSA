@@ -1,6 +1,6 @@
 import { sumOfFirstNNaturalNumbers } from './SumFirstNNatural';
 
-describe('sumOfFirstNNaturalNumbers - edge cases', () => {
+describe('sumOfFirstNNaturalNumbers - test cases', () => {
   it('should return NaN for negative n', () => {
     expect(sumOfFirstNNaturalNumbers(-5)).toBe(0);
   });

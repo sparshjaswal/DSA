@@ -12,7 +12,7 @@
 const PrimeNumber = (n) => {
   if (n <= 1) return `${n} is NOT prime`;
   else {
-    for (let i = 2; i < n; i++) {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
       if (n % i === 0) return `${n} is NOT prime`;
     }
     return `${n} is prime`;

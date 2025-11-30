@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node fixedMainFile.js"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.28.5",

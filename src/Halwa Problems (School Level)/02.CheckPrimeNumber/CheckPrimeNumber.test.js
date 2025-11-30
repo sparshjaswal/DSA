@@ -1,6 +1,6 @@
 import { PrimeNumber } from './CheckPrimeNumber';
 
-describe('PrimeNumber - edge cases', () => {
+describe('PrimeNumber - test cases', () => {
   it('should return 0 is NOT prime', () => {
     expect(PrimeNumber(0)).toBe('0 is NOT prime');
   });
