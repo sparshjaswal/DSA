@@ -15,7 +15,19 @@
 // Explanation: Only element is 1 which is smallest, so there is no second smallest element.
 
 const smallest2number = (arr) => {
- 
+    if (arr.length < 2) return [-1];
+    let first = Infinity;
+    let second = Infinity;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < first) {
+            second = first;
+            first = arr[i];
+        } else if (arr[i] < second && arr[i] !== first) {
+            second = arr[i];
+        }
+    }
+    if (second === Infinity) return [-1];
+    return [first, second];
 }
 
 console.log(smallest2number([12, 25, 8, 55, 10, 33, 17, 11]))

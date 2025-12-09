@@ -1,23 +1,17 @@
-// Program for Armstrong Numbers
-// Given a number x, determine whether the given number is Armstrong's number or not. A positive integer of n digits is called an Armstrong number of order n (order is the number of digits) if
+// Check if a given Year is Leap Year
+// You are given an Integer n. Return true if It is a Leap Year otherwise return false. A leap year is a year that contains an additional day, February 29th, making it 366 days long instead of the usual 365 days. Leap years are necessary to keep our calendar in alignment with the Earth's revolutions around the Sun.
+// Note: A year is a leap year if "any one of " the following conditions are satisfied: 
 
-// abcd... = pow(a,n) + pow(b,n) + pow(c,n) + pow(d,n) + ....
-
-// Here a, b, c and d are digits of input number abcd.....
-
-// Examples
-
-// Input: n = 153
+// The year is multiple of 400.
+// The year is a multiple of 4 and not a multiple of 100.
+// Example:
+// Input: n = 4
 // Output: true
-// Explanation: 153 is an Armstrong number, 1*1*1 + 5*5*5 + 3*3*3 = 153
+// Explanation: 4 is not divisible by 100 and is divisible by 4 so its a leap year
 
-// Input: n = 9474
-// Output: true                                 
-// Explanation: 94 + 44 + 74 + 44 = 6561 + 256 + 2401 + 256 = 9474
-
-// Input: n = 123
+// Input: n = 2021
 // Output: false
-// Explanation: 1³ + 2³ + 3³ = 1 + 8 + 27 = 36
+// Explanation: 2021 is not divisible by 100 and is also not divisible by 4 so its not a leap year
 
 const isLeapYear = (n) => {
     return n % 4===0 && n %100 !==0;
