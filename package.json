@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "node fixedMainFile.js"
+    "start": "node ./index.js"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.28.5",
