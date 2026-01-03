@@ -1,0 +1,73 @@
+
+{
+  // Disable AI code suggestions (Copilot, IntelliCode, etc.)
+  "github.copilot.enable": {
+    "*": false
+  },
+  "editor.suggest.showWords": true,
+  "editor.suggest.showSnippets": false,
+  "editor.inlineSuggest.enabled": false,
+
+  // Disable IntelliCode (AI-based completions)
+  "vsintellicode.features": {
+    "completions": "disabled"
+  },
+
+  // Disable spell check / autocorrect
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoSurround": "never",
+  "editor.formatOnType": false,
+  "editor.formatOnSave": false,
+
+  // Disable JavaScript/TypeScript language hints & suggestions
+  "javascript.suggest.enabled": false,
+  "typescript.suggest.enabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false,
+  "javascript.inlayHints.parameterTypes.enabled": false,
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.enabled": false,
+
+  // Turn off hover tooltips and parameter hints globally
+  "editor.hover.enabled": "off",
+  "editor.parameterHints.enabled": false,
+"editor.wordWrap": "on",
+  // Per-language: ensure quick suggestions and hints are off
+  "[javascript]": {
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggest.showKeywords": false,
+    "editor.suggest.showMethods": false,
+    "editor.suggest.showFunctions": false,
+    "editor.suggest.showModules": false,
+    "editor.suggest.showProperties": false,
+    "editor.suggest.showClasses": false,
+    "editor.suggest.showInterfaces": false,
+    "editor.suggest.showVariables": false
+  },
+  "[typescript]": {
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggest.showKeywords": false,
+    "editor.suggest.showMethods": false,
+    "editor.suggest.showFunctions": false,
+    "editor.suggest.showModules": false,
+    "editor.suggest.showProperties": false,
+    "editor.suggest.showClasses": false,
+    "editor.suggest.showInterfaces": false,
+    "editor.suggest.showVariables": false,
+  }
+}
