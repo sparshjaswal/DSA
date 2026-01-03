@@ -17,8 +17,8 @@
 // Constraints:
 // 0 <= rowIndex <= 33
 
-
-const getRow = rowIndex => {
+const getRow = (rowIndex) => {
+    if(rowIndex ===0 ) return [1]
     const res = [];
     for(let i=0;i<=rowIndex;i++){
         const row = new Array(i+1).fill(1);
@@ -34,4 +34,4 @@ console.log(getRow(3))
 console.log(getRow(0))
 console.log(getRow(1))
 
-export { getRow };
+export { getRow }
