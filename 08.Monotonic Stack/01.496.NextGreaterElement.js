@@ -26,21 +26,22 @@
 // All the integers of nums1 also appear in nums2.
 
 // Follow up: Could you find an O(nums1.length + nums2.length) solution?
-
 var nextGreaterElement = (nums1, nums2) => {
-   let stack = new Map();
-   for(let i=0;i<nums2.length;i++){
-      let tempNum =-1;
-      if(nums2[i+1]>nums2[i])
-         tempNum=nums2[i+1];
-      stack.set(nums2[i],tempNum);
+   // simpler approach
+   let stack = [];
+   let map = new Map();
+
+   for(let num of nums2){
+      while(stack.length && num > stack[stack.length-1]){
+            map.set(stack.pop(),num);
+      }
+      stack.push(num);
    }
-   let arr = [];
-   for(let i of nums1){
-      arr.push(stack.get(i));
+   while(stack.length){
+      map.set(stack.pop(),-1);
    }
-   return arr;
+   return nums1.map(item => map.get(item));
 }
-// console.log(nextGreaterElement([4,1,2],[1,3,4,2]));
-// console.log(nextGreaterElement([2,4],[1,2,3,4]));
+console.log(nextGreaterElement([4,1,2],[1,3,4,2]));
+console.log(nextGreaterElement([2,4],[1,2,3,4]));
 console.log(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]));
