@@ -35,3 +35,11 @@
 // Constraints:
 // 1 <= days <= weights.length <= 5 * 104
 // 1 <= weights[i] <= 500
+
+const shipWithinDays = (weights, days) => {
+    return weights.reduce((acc,val)=>acc+val,0)
+};
+
+console.log(shipWithinDays([1,2,3,4,5,6,7,8,9,10],5));
+console.log(shipWithinDays([3,2,2,4,1,4],3));
+console.log(shipWithinDays([1,2,3,1,1],4));
