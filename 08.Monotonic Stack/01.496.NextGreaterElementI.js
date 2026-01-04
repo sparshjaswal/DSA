@@ -28,9 +28,19 @@
 // Follow up: Could you find an O(nums1.length + nums2.length) solution?
 
 var nextGreaterElement = (nums1, nums2) => {
-   const n1= new Set(nums1);
-   const n2= new Set(nums2);
-   return {n1.get(nums2[0]),n2}
+   let stack = new Map();
+   for(let i=0;i<nums2.length;i++){
+      let tempNum =-1;
+      if(nums2[i+1]>nums2[i])
+         tempNum=nums2[i+1];
+      stack.set(nums2[i],tempNum);
+   }
+   let arr = [];
+   for(let i of nums1){
+      arr.push(stack.get(i));
+   }
+   return arr;
 }
-console.log(nextGreaterElement([4,1,2],[1,3,4,2]))
-console.log(nextGreaterElement([2,4],[1,2,3,4]))
+// console.log(nextGreaterElement([4,1,2],[1,3,4,2]));
+// console.log(nextGreaterElement([2,4],[1,2,3,4]));
+console.log(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]));
