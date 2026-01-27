@@ -1,4 +1,3 @@
-
 {
   // Disable AI code suggestions (Copilot, IntelliCode, etc.)
   "github.copilot.enable": {
@@ -38,7 +37,7 @@
   // Turn off hover tooltips and parameter hints globally
   "editor.hover.enabled": "off",
   "editor.parameterHints.enabled": false,
-"editor.wordWrap": "on",
+  "editor.wordWrap": "on",
   // Per-language: ensure quick suggestions and hints are off
   "[javascript]": {
     "editor.quickSuggestions": {
@@ -68,6 +67,6 @@
     "editor.suggest.showProperties": false,
     "editor.suggest.showClasses": false,
     "editor.suggest.showInterfaces": false,
-    "editor.suggest.showVariables": false,
+    "editor.suggest.showVariables": false
   }
 }
